@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+puts " going to seed"
+20. times do
+ingredients = Ingredient.create(name: "lekker")
+end
+puts " finished seeding"

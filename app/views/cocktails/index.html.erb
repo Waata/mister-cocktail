@@ -2,7 +2,6 @@
   <div class= "row">
     <div class= "col-sm-12 text-center">
       <h1> Listing cocktails </h1>
-      <%= render 'form', cocktail: @cocktail %>
       <ul>
         <%= @cocktails.each do |cocktail| %>
         <li><%= cocktail.name %> </li>
