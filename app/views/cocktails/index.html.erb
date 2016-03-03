@@ -2,13 +2,15 @@
   <div class= "row">
     <div class= "col-sm-12 text-center">
       <h1> Listing cocktails </h1>
-      <ul>
-        <%= @cocktails.each do |cocktail| %>
+     
+        <%@cocktails.each do |cocktail| %>
         <li><%= cocktail.name %> </li>
+        <br>
         <li><%= link_to 'Show', cocktail %> </li>
         <li><%= link_to 'Edit', [:edit, cocktail] %> </li>
-        <li><%= cocktail.name %> </li>
-      </ul>
+        <br>
+       
+
       <% end %>
     </div>
   </div>

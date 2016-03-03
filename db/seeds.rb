@@ -7,7 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 puts " going to seed"
-20. times do
-ingredients = Ingredient.create(name: "lekker")
+20.times do
+doses = Dose.create(description: "1 unit")
+cocktails = Cocktail.create(name: "Sunrise")
 end
+
 puts " finished seeding"

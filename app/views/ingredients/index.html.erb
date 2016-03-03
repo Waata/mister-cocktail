@@ -1,0 +1,14 @@
+<h1>Listing ingredients</h1>
+
+<%= render 'form', ingredient: @ingredient %>
+
+<ul>
+  <% @ingredients.each do |ingredient| %>
+    <li>
+      <%= ingredient.name %>
+      <%= link_to 'Show', ingredient %>
+      <%= link_to 'Edit', [:edit, ingredient] %>
+      <%= link_to 'Delete', ingredient, method: :delete, data: { confirm: 'U sure?' } %>
+    </li>
+  <% end %>
+</ul>

@@ -2,12 +2,13 @@
   <div class= "row">
     <div class= "col-sm-12 text-center">
       <h1><%= @cocktail.name %></h1>
+     
 
       <h2> Ingredients </h2>
 
       <%= form_for @dose do |f| %>
       <%= f.label :amount %>
-  
+
       <%= f.label :ingredient_id %>
       <%= f.collection_select :ingredient_id, Ingredient.all, :id, :name %>
       <% f.hidden_field :cocktail_id, value: @cocktail.id %>
