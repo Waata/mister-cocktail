@@ -9,11 +9,13 @@
 
 
 
-puts " going to seed"
-20.times do
+puts "going to seed"
 
-cocktails = Cocktail.create(name: "Sunrise")
-end
+
+cocktails = Cocktail.create(name: "Cocont")
+cocktails = Cocktail.create(name: "Coonut")
+cocktails = Cocktail.create(name: "Conut")
+
 
 ingredients = Ingredient.create(name: "Apple")
 ingredients = Ingredient.create(name: "Orange")
@@ -22,11 +24,5 @@ ingredients = Ingredient.create(name: "Pineapple")
 ingredients = Ingredient.create(name: "Coke")
 ingredients = Ingredient.create(name: "Rum")
 ingredients = Ingredient.create(name: "Apple")
-
-
-
-
-
-
 
 puts " finished seeding"
