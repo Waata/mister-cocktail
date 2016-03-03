@@ -8,5 +8,6 @@ class Ingredient < ActiveRecord::Base
   validates :name,
   presence: true,
   length: { maximum: 100 },
-  format: { with: /\A[^\d]+\z/ }
+  format: { with: /\A[^\d]+\z/ },
+  allow_blank: false
 end

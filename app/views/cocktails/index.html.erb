@@ -1,12 +1,16 @@
-<h1> Listing cocktails </h1>
-
- <%= render 'form', cocktail: @cocktail %>
-
-<ul>
-  <%= @cocktails.each do |cocktail| %>
-    <li><%= cocktail.name %> </li>
-    <li><%= link_to 'Show', cocktail %> </li>
-    <li><%= link_to 'Edit', [:edit, cocktail] %> </li>
-    <li><%= cocktail.name %> </li>
-    <% end %>
-    </ul>
+<div class= "container">
+  <div class= "row">
+    <div class= "col-sm-12 text-center">
+      <h1> Listing cocktails </h1>
+      <%= render 'form', cocktail: @cocktail %>
+      <ul>
+        <%= @cocktails.each do |cocktail| %>
+        <li><%= cocktail.name %> </li>
+        <li><%= link_to 'Show', cocktail %> </li>
+        <li><%= link_to 'Edit', [:edit, cocktail] %> </li>
+        <li><%= cocktail.name %> </li>
+      </ul>
+      <% end %>
+    </div>
+  </div>
+</div>
