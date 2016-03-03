@@ -2,11 +2,12 @@
   <div class= "row">
     <div class= "col-sm-12 text-center">
       <h1><%= @cocktail.name %></h1>   
-      
       <h2> Ingredients </h2>
-       <h1><%= @cocktail.doses %></h1>
-       <h1><%= @cocktail.ingredients %></h1>
-
-      </div>
+      <h1><%= @doses %></h1>
+      <h1><%= @ingredients %></h1>     
+      <br>
+      <%= link_to 'Index', cocktails_path %>
+      <%= link_to 'Edit', ingredients_edit_path%>
+    </div>
   </div>
 </div>

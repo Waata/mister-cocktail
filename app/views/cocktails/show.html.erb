@@ -2,24 +2,21 @@
   <div class= "row">
     <div class= "col-sm-12 text-center">
       <h1><%= @cocktail.name %></h1>
-     
-
-      <h2> Ingredients </h2>
-
-      <%= form_for @dose do |f| %>
-      <%= f.label :amount %>
-
+      <h4> Ingredients </h4>
+      <% @cocktail.doses.each do |dose| %>
+      <%= dose.description %>
+      <%= dose.ingredient.name %>
+      <br>
+      <br>
+      <%= form_for @dose, url: cocktail_doses_path(@cocktail) do |f| %>
+      <%= f.label :description %>
+      <%= f.text_field :description %>
       <%= f.label :ingredient_id %>
       <%= f.collection_select :ingredient_id, Ingredient.all, :id, :name %>
-      <% f.hidden_field :cocktail_id, value: @cocktail.id %>
       <%= f.submit %>
       <% end %>
-
-      <%= @cocktail.doses.each do |dose| %>
-      <%=dose.amount %>
-      <%= dose.ingredient.name %>
-      <% end %>
-
+      <br>
+      <%= link_to 'Index', cocktails_path %>
     </div>
   </div>
 </div>

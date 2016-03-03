@@ -6,10 +6,27 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+
+
+
 puts " going to seed"
 20.times do
-doses = Dose.create(description: "1 unit")
+
 cocktails = Cocktail.create(name: "Sunrise")
 end
+
+ingredients = Ingredient.create(name: "Apple")
+ingredients = Ingredient.create(name: "Orange")
+ingredients = Ingredient.create(name: "Tree")
+ingredients = Ingredient.create(name: "Pineapple")
+ingredients = Ingredient.create(name: "Coke")
+ingredients = Ingredient.create(name: "Rum")
+ingredients = Ingredient.create(name: "Apple")
+
+
+
+
+
+
 
 puts " finished seeding"

@@ -1,4 +1,14 @@
-<%= simple_form_for ingredient do |f| %>
-  <%= f.input :name %>
-  <%= f.submit %>
-<% end %>
+      <div class= "container">
+        <div class= "row">
+          <div class= "col-sm-12 text-center">
+            <h1><%= @cocktail.name.ingredients %></h1>   
+            <%= simple_form_for ingredient do |f| %>
+            <%= f.input :name %>
+            <%= f.submit %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+
+

@@ -1,3 +1,14 @@
-<h1>Rename an ingredient</h1>
-
-<%= render 'form', ingredient: @ingredient %>
+<div class= "container">
+  <div class= "row">
+    <div class= "col-sm-12 text-center">
+    <h1>Rename an ingredient</h1>
+      <ul>
+        <% @ingredient.cocktails.each do |cocktail| %>
+          <li><%= cocktail.name %></li>
+        <% end %>
+         <%= link_to 'Index', cocktails_path %>
+      </ul>
+    </div>
+  </div>
+</div>
+   
