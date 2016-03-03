@@ -8,13 +8,15 @@
 
 
 
+Cocktail.delete_all
+Ingredient.delete_all
 
 puts "going to seed"
 
 
-cocktails = Cocktail.create(name: "Cocont")
-cocktails = Cocktail.create(name: "Coonut")
-cocktails = Cocktail.create(name: "Conut")
+Cocktail.create(name: "asdfg")
+Cocktail.create(name: "qwerty")
+Cocktail.create(name: "zxcvbn")
 
 
 ingredients = Ingredient.create(name: "Apple")
