@@ -6,6 +6,7 @@
       <% @cocktail.doses.each do |dose| %>
       <%= dose.description %>
       <%= dose.ingredient.name %>
+      <% end %>
       <br>
       <br>
       <%= form_for @dose, url: cocktail_doses_path(@cocktail) do |f| %>
