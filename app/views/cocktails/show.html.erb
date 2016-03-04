@@ -1,6 +1,7 @@
 <div class= "container">
   <div class= "row">
     <div class= "col-sm-12 text-center">
+    <%= cl_image_tag @cocktail.photo, height: 100 %>
       <h1><%= @cocktail.name %></h1>
       <h4> Ingredients </h4>
       <% @cocktail.doses.each do |dose| %>
@@ -8,8 +9,7 @@
       <%= dose.ingredient.name %>
       <% end %>
       <br>
-      <br>
-      <%= form_for @dose, url: cocktail_doses_path(@cocktail) do |f| %>
+      <%= simple_form_for @dose, url: cocktail_doses_path(@cocktail) do |f| %>
       <%= f.label :description %>
       <%= f.text_field :description %>
       <%= f.label :ingredient_id %>

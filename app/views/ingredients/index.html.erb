@@ -2,19 +2,13 @@
   <div class= "row">
     <div class= "col-sm-12 text-center">
       <h1>Listing ingredients</h1>
-    
-
-      <ul>
         <% @ingredients.each do |ingredient| %>
-        <li>
-          <%= ingredient.name %>
+         <li> <%= ingredient.name %></li>
           <%= link_to 'Show', ingredient %>
           <%= link_to 'Edit', [:edit, ingredient] %>
           <%= link_to 'Delete', ingredient, method: :delete, data: { confirm: 'U sure?' } %>
-        </li>
         <% end %>
-      </ul>
-      <%= link_to 'Index', cocktails_path %>
+      <li><%= link_to 'Index', cocktails_path %></li>
     </div>
   </div>
 </div>
